@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style/output.css" />
+    <link rel="stylesheet" href="./style/scrollbar.css" />
     <link
       rel="shortcut icon"
       href="./style/images/train.png"
@@ -21,14 +22,14 @@
 
   <body class="font-Work">
     <header class="flex justify-between items-center mx-6 h-[7vh]">
-      <a href=""
-        ><h1 class="text-[#5cab91] font-bold font-Noto text-lg">
+      <a href="./index.html"
+        ><h1 class="text-[#5cab91] font-extrabold font-Noto text-lg">
           Tickethack
         </h1></a
       >
       <nav class="flex gap-6 text-xs font-semibold">
-        <a href="">Cart</a>
-        <a href="">Bookings</a>
+        <a href="./pages/cart.html">Cart</a>
+        <a href="./pages/bookings.html">Bookings</a>
       </nav>
     </header>
     <main class="bg-[url('./images/background.jpg')] bg-cover bg-top h-[93vh]">
@@ -41,24 +42,29 @@
       </p>
       <div
         id="cards-container"
-        class="flex justify-center gap-24 mt-6 h-[350px]"
+        class="flex justify-center gap-36 mt-6 h-[350px]"
       >
         <div
           class="card flex flex-col justify-between bg-white w-[300px] rounded-lg px-4 py-6"
         >
           <div id="inputs" class="flex flex-col">
             <input
-              class="bg-gray-100 rounded-md p-2 placeholder-[#696969]"
+              class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae]"
               type="text"
               placeholder="Departure"
+              id="departure"
             />
             <div class="h-px w-[260px] bg-[#bdbdbd] mx-auto"></div>
             <input
-              class="bg-gray-100 rounded-md p-2 placeholder-[#696969]"
+              class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae]"
               type="text"
               placeholder="Arrival"
+              id="arrival"
             />
-            <input class="bg-gray-100 rounded-md p-2 mt-8" type="date" />
+            <input
+              class="bg-gray-100 rounded-md p-2 mt-8 focus:outline-[#215cae]"
+              type="date"
+            />
           </div>
           <button
             id="search-btn"
@@ -68,7 +74,8 @@
           </button>
         </div>
         <div
-          class="card bg-white w-[300px] rounded-lg flex flex-col items-center justify-center gap-8"
+          id="search-result"
+          class="card bg-white w-[300px] rounded-lg flex flex-col items-center justify-center gap-8 font-[500] text-sm p-4"
         >
           <img
             class="size-[120px]"
@@ -76,7 +83,7 @@
             alt="train img"
           />
           <div class="h-0.5 w-[200px] bg-[#5cab91]"></div>
-          <p class="text-sm font-[500]">It's time to book your future trip.</p>
+          <p class="">It's time to book your future trip.</p>
         </div>
       </div>
     </main>

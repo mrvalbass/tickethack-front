@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickethack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/output.css" />
+    <link
+      rel="shortcut icon"
+      href="../style/images/train.png"
+      type="image/x-icon"
+    />
+    <script src="../script/cart.js" defer></script>
+  </head>
+
+  <body class="font-Work">
+    <header class="flex justify-between items-center mx-6 h-[7vh]">
+      <a href="../index.html"
+        ><h1 class="text-[#5cab91] font-extrabold font-Noto text-lg">
+          Tickethack
+        </h1></a
+      >
+      <nav class="flex gap-6 text-xs font-semibold">
+        <a href="./cart.html">Cart</a>
+        <a href="./bookings.html">Bookings</a>
+      </nav>
+    </header>
+
+    <main
+      class="bg-[#eff1f1] h-[93vh] flex flex-col justify-center items-center"
+    >
+      <div
+        id="cart-container"
+        class="bg-white rounded-t-lg w-3/5 text-center px-12 py-8 flex flex-col gap-6 font-[500] text-sm"
+      ></div>
+      <div
+        id="totals"
+        class="bg-[#00153e] w-3/5 rounded-b-lg px-9 py-5 text-sm text-white flex justify-between items-center opacity-0"
+      >
+        <p>Total : <span id="total"></span>€</p>
+        <button class="bg-[#5cab91] rounded-[3px] px-3 py-1">Purchase</button>
+      </div>
+    </main>
+  </body>
+</html>
