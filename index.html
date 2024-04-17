@@ -36,16 +36,16 @@
       <h2 class="text-center text-white pt-12 text-3xl font-[500]">
         Explore the world effortlessly by train!
       </h2>
-      <p class="text-center text-white py-4 text-lg font-light">
+      <p class="text-center text-white p-4 text-lg font-light">
         Compare, book and enjoy cheap prices for train tickets: your journey
         starts on Tickethack.
       </p>
       <div
         id="cards-container"
-        class="flex justify-center gap-36 mt-6 h-[350px]"
+        class="flex gap-8 mt-6 w-[95svw] mx-auto flex-col h-[550px] md:h-[350px] md:flex-row md:items-stretch md:justify-center md:gap-36"
       >
         <div
-          class="card flex flex-col justify-between bg-white w-[300px] rounded-lg px-4 py-6"
+          class="card flex flex-col justify-between bg-white md:w-[350px] rounded-lg px-4 py-6"
         >
           <div id="inputs" class="flex flex-col">
             <input
@@ -54,7 +54,7 @@
               placeholder="Departure"
               id="departure"
             />
-            <div class="h-px w-[260px] bg-[#bdbdbd] mx-auto"></div>
+            <div class="h-px w-[85svw] md:w-[310px] bg-[#bdbdbd] mx-auto"></div>
             <input
               class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae]"
               type="text"
@@ -68,14 +68,14 @@
           </div>
           <button
             id="search-btn"
-            class="bg-[#5cab91] text-white w-full rounded-md p-1"
+            class="bg-[#5cab91] text-white w-full rounded-md p-1 mt-8 md:mt-0"
           >
             Search
           </button>
         </div>
         <div
           id="search-result"
-          class="card bg-white w-[300px] rounded-lg flex flex-col items-center justify-center gap-8 font-[500] text-sm p-4"
+          class="card bg-white md:w-[350px] rounded-lg flex flex-col items-center justify-center gap-8 font-[500] text-sm p-4"
         >
           <img
             class="size-[120px]"
