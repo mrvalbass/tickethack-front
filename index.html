@@ -27,13 +27,15 @@
           Tickethack
         </h1></a
       >
-      <nav class="flex gap-6 text-xs font-semibold">
+      <nav class="flex gap-6 md:text-xs font-semibold">
         <a href="./pages/cart.html">Cart</a>
         <a href="./pages/bookings.html">Bookings</a>
       </nav>
     </header>
-    <main class="bg-[url('./images/background.jpg')] bg-cover bg-top h-[93vh]">
-      <h2 class="text-center text-white pt-12 text-3xl font-[500]">
+    <main
+      class="bg-[url('./images/background.jpg')] bg-cover bg-top h-[93vh] overflow-y-auto"
+    >
+      <h2 class="text-center text-white py-4 pt-12 text-3xl font-[500]">
         Explore the world effortlessly by train!
       </h2>
       <p class="text-center text-white p-4 text-lg font-light">
@@ -42,7 +44,7 @@
       </p>
       <div
         id="cards-container"
-        class="flex gap-8 mt-6 w-[95svw] mx-auto flex-col h-[550px] md:h-[350px] md:flex-row md:items-stretch md:justify-center md:gap-36"
+        class="flex gap-8 my-6 w-[95svw] mx-auto flex-col h-[550px] md:h-[350px] md:flex-row md:items-stretch md:justify-center md:gap-36"
       >
         <div
           class="card flex flex-col justify-between bg-white md:w-[350px] rounded-lg px-4 py-6"
