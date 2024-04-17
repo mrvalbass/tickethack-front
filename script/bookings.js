@@ -2,9 +2,9 @@ const bookingContainer = document.querySelector("#booking-container");
 const bookingBottom = document.querySelector("#booking-bottom");
 
 async function displayBookings() {
-  const data = await fetch("http://localhost:3000/bookings/").then((r) =>
-    r.json()
-  );
+  const data = await fetch(
+    "https://tickethack-back-ten.vercel.app/bookings/"
+  ).then((r) => r.json());
   if (data.allTripsInBooking.length !== 0) {
     bookingBottom.classList.remove("opacity-0");
     bookingContainer.innerHTML = "";

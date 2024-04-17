@@ -3,9 +3,9 @@ const totals = document.querySelector("#totals");
 const total = totals.querySelector("#total");
 
 async function displayCart() {
-  const data = await fetch("http://localhost:3000/carts/").then((r) =>
-    r.json()
-  );
+  const data = await fetch(
+    "https://tickethack-back-ten.vercel.app/carts/"
+  ).then((r) => r.json());
   if (data.allTripsInCart.length !== 0) {
     totals.classList.remove("opacity-0");
     cartContainer.innerHTML = "";
@@ -77,11 +77,13 @@ cartContainer.addEventListener("click", async (e) => {
     const options = { method: "DELETE" };
     const trip_id = e.target.parentNode.dataset.id;
     const response = await fetch(
-      `http://localhost:3000/carts/${trip_id}`,
+      `https://tickethack-back-ten.vercel.app/carts/${trip_id}`,
       options
     ).then((r) => r.json());
     if (cartContainer.children.length <= 2) await displayCart();
-    const totalAmount = await fetch("http://localhost:3000/carts/")
+    const totalAmount = await fetch(
+      "https://tickethack-back-ten.vercel.app/carts/"
+    )
       .then((r) => r.json())
       .then((data) =>
         data.allTripsInCart.reduce((acc, val) => acc + val.price, 0)
@@ -102,9 +104,12 @@ totals.addEventListener("click", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ trip_id }),
     };
-    await fetch(`http://localhost:3000/bookings/`, bookingsOptions);
+    await fetch(
+      `https://tickethack-back-ten.vercel.app/bookings/`,
+      bookingsOptions
+    );
     const cartOptions = { method: "DELETE" };
-    await fetch(`http://localhost:3000/carts/`, cartOptions);
+    await fetch(`https://tickethack-back-ten.vercel.app/carts/`, cartOptions);
     window.location.assign("./bookings.html");
   }
 });

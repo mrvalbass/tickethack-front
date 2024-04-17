@@ -61,7 +61,7 @@ searchBtn.addEventListener("click", async () => {
   const date = dateInput.value;
 
   const data = await fetch(
-    `http://localhost:3000/trips?departure=${departure}&arrival=${arrival}&date=${date}`
+    `https://tickethack-back-ten.vercel.app/trips?departure=${departure}&arrival=${arrival}&date=${date}`
   ).then((r) => r.json());
   if (data.allTripsByDestination.length !== 0) {
     resultContainer.innerHTML = "";
@@ -89,7 +89,7 @@ resultContainer.addEventListener("click", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ trip_id }),
     };
-    await fetch("http://localhost:3000/carts", options);
+    await fetch("https://tickethack-back-ten.vercel.app/carts", options);
     window.location.assign("./pages/cart.html");
   }
 });
