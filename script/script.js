@@ -11,9 +11,6 @@ dateInput.value = `${new Date().getFullYear()}-${`${
   new Date().getMonth() + 1
 }`.padStart(2, "0")}-${`${new Date().getDate()}`.padStart(2, "0")}`;
 
-departureInput.value = "Paris";
-arrivalInput.value = "Lyon";
-
 //
 function createTrip(trip) {
   const tripElement = document.createElement("div");

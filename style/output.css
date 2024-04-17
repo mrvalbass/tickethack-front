@@ -725,6 +725,11 @@ video {
   margin-right: auto;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -735,6 +740,18 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .box-border {
@@ -865,12 +882,28 @@ video {
   height: 1px;
 }
 
-.w-1\/2 {
-  width: 50%;
+.h-\[2px\] {
+  height: 2px;
 }
 
-.w-3\/4 {
-  width: 75%;
+.h-\[1px\] {
+  height: 1px;
+}
+
+.h-\[3px\] {
+  height: 3px;
+}
+
+.h-\[5px\] {
+  height: 5px;
+}
+
+.h-\[1\.5px\] {
+  height: 1.5px;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .w-\[200px\] {
@@ -899,10 +932,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-3\/5 {
-  width: 60%;
 }
 
 .flex-shrink {
@@ -1755,6 +1784,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-\[3px\] {
+  border-radius: 3px;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1767,21 +1800,14 @@ video {
   border-radius: 0.125rem;
 }
 
-.rounded-\[5px\] {
-  border-radius: 5px;
-}
-
-.rounded-\[4px\] {
-  border-radius: 4px;
-}
-
-.rounded-\[3px\] {
-  border-radius: 3px;
-}
-
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .rounded-e {
@@ -1812,11 +1838,6 @@ video {
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-}
-
-.rounded-b-lg {
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
 }
 
 .rounded-bl {
@@ -1913,6 +1934,11 @@ video {
   border-style: none;
 }
 
+.bg-\[\#00153e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 21 62 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#5cab91\] {
   --tw-bg-opacity: 1;
   background-color: rgb(92 171 145 / var(--tw-bg-opacity));
@@ -1948,9 +1974,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#00153e\] {
+.bg-\[\#565d6e\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 21 62 / var(--tw-bg-opacity));
+  background-color: rgb(86 93 110 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\/images\/background\.jpg\'\)\] {
@@ -2087,16 +2113,9 @@ video {
   padding: 1rem;
 }
 
-.p-12 {
-  padding: 3rem;
-}
-
-.p-8 {
-  padding: 2rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-2 {
@@ -2104,9 +2123,19 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 .py-0 {
@@ -2119,24 +2148,9 @@ video {
   padding-bottom: 0.125rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .py-3 {
@@ -2144,39 +2158,24 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 
 .pt-12 {
@@ -2279,16 +2278,16 @@ video {
   font-weight: 700;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
 .font-light {
   font-weight: 300;
 }
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-extrabold {
-  font-weight: 800;
 }
 
 .uppercase {
@@ -2806,10 +2805,6 @@ video {
 .hover\:before\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
-}
-
-.focus\:outline-blue-500:focus {
-  outline-color: #3b82f6;
 }
 
 .focus\:outline-\[\#215cae\]:focus {

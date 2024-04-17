@@ -90,3 +90,21 @@ cartContainer.addEventListener("click", async (e) => {
     if (response.result) e.target.parentNode.remove();
   }
 });
+
+totals.addEventListener("click", async (e) => {
+  if (e.target.tagName === "BUTTON") {
+    const trip_id = Array.from(cartContainer.children)
+      .slice(1)
+      .map((elem) => elem.dataset.id)
+      .join(",");
+    const bookingsOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ trip_id }),
+    };
+    await fetch(`http://localhost:3000/bookings/`, bookingsOptions);
+    const cartOptions = { method: "DELETE" };
+    await fetch(`http://localhost:3000/carts/`, cartOptions);
+    window.location.assign("./bookings.html");
+  }
+});

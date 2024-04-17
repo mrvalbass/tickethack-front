@@ -16,13 +16,13 @@
       href="../style/images/train.png"
       type="image/x-icon"
     />
-    <script src="./script/script.js" defer></script>
+    <script src="../script/bookings.js" defer></script>
   </head>
 
   <body class="font-Work">
     <header class="flex justify-between items-center mx-6 h-[7vh]">
       <a href="../index.html"
-        ><h1 class="text-[#5cab91] font-bold font-Noto text-lg">
+        ><h1 class="text-[#5cab91] font-extrabold font-Noto text-lg">
           Tickethack
         </h1></a
       >
@@ -31,8 +31,21 @@
         <a href="./bookings.html">Bookings</a>
       </nav>
     </header>
-    <main class="bg-[#eff1f1] h-[93vh] flex justify-center items-center">
-      <div class="bg-white rounded-t-lg w-1/2 text-center"></div>
+
+    <main
+      class="bg-[#eff1f1] h-[93vh] flex flex-col justify-center items-center font-[500]"
+    >
+      <div
+        id="booking-container"
+        class="bg-white rounded-t-lg w-3/5 text-center px-12 py-8 flex flex-col gap-6 font-[500] text-sm"
+      ></div>
+      <div
+        id="booking-bottom"
+        class="bg-white w-3/5 rounded-b-lg text-sm text-[#5cab91] flex flex-col items-center opacity-0"
+      >
+        <div class="h-[1.5px] w-[200px] bg-[#565d6e] mt-3 mb-5"></div>
+        <p class="mb-5">Enjoy your travels with Tickethack!</p>
+      </div>
     </main>
   </body>
 </html>
