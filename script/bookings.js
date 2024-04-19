@@ -61,9 +61,14 @@ function createTrip(trip) {
   price.textContent = `${trip.price}€`;
   const timeToDeparture = getTimeToDeparture(trip.date);
   if (timeToDeparture < 0) {
-    timeToDepartureContainer.textContent = "Train has already left!";
+    timeToDepartureContainer.textContent = "Train has left!";
   } else if (timeToDeparture === 0) {
     timeToDepartureContainer.textContent = "Departure in less than 1 hour";
+  } else if (timeToDeparture >= 24) {
+    const timeToDepartureInDays = Math.floor(timeToDeparture / 24);
+    timeToDepartureContainer.textContent = `Departure in ${timeToDepartureInDays} ${
+      timeToDepartureInDays === 1 ? "day" : "days"
+    }`;
   } else {
     timeToDepartureContainer.textContent = `Departure in ${timeToDeparture} ${
       timeToDeparture === 1 ? "hour" : "hours"
