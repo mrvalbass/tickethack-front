@@ -18,7 +18,6 @@ async function updateNavBar() {
     if (response.result) {
       const profilePicture = document.createElement("img");
       const userName = userLink.querySelector("a");
-      console.log(userName);
       profilePicture.src = response.user.profilePictureURL;
       profilePicture.classList.add(
         "rounded-full",

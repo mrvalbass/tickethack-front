@@ -7,7 +7,6 @@ async function displayBookings() {
       "userId"
     )}`
   ).then((r) => r.json());
-  console.log(data.allTripsInBooking);
   if (data.allTripsInBooking.length !== 0) {
     bookingBottom.classList.remove("opacity-0");
     bookingContainer.innerHTML = "";

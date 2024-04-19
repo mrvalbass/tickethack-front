@@ -84,7 +84,6 @@ searchBtn.addEventListener("click", async () => {
 resultContainer.addEventListener("click", async (e) => {
   if ((e.target.tagName = "BUTTON")) {
     const trip_id = e.target.parentNode.dataset.id;
-    console.log(window.localStorage);
     if (!window.localStorage.getItem("userId")) {
       window.localStorage.setItem("tripId", trip_id);
       window.location.assign("./pages/connection.html");
