@@ -84,12 +84,20 @@ searchBtn.addEventListener("click", async () => {
 resultContainer.addEventListener("click", async (e) => {
   if ((e.target.tagName = "BUTTON")) {
     const trip_id = e.target.parentNode.dataset.id;
+    console.log(window.localStorage);
+    if (!window.localStorage.getItem("userId")) {
+      window.localStorage.setItem("tripId", trip_id);
+      window.location.assign("./pages/connection.html");
+    }
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ trip_id }),
+      body: JSON.stringify({
+        trip_id,
+        user_id: window.localStorage.getItem("userId"),
+      }),
     };
-    await fetch("https://tickethack-back-ten.vercel.app/carts", options);
+    await fetch(`https://tickethack-back-ten.vercel.app/carts/`, options);
     window.location.assign("./pages/cart.html");
   }
 });

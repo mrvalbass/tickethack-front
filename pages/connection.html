@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickethack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/output.css" />
+    <link rel="stylesheet" href="../style/scrollbar.css" />
+    <link
+      rel="shortcut icon"
+      href="./style/images/train.png"
+      type="image/x-icon"
+    />
+    <script src="../script/user.js" defer></script>
+    <script src="../script/navbar.js" defer></script>
+  </head>
+
+  <body class="font-Work">
+    <header class="flex justify-between items-center mx-6 h-[7vh]">
+      <a href="../index.html"
+        ><h1 class="text-[#5cab91] font-extrabold font-Noto text-lg">
+          Tickethack
+        </h1></a
+      >
+      <nav class="flex gap-6 md:text-xs font-semibold items-center">
+        <a href="./cart.html">Cart</a>
+        <a href="./bookings.html">Bookings</a>
+        <div id="user-status" class="flex items-center gap-2">
+          <a href="./connection.html">Sign Up / Sign In</a>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="bg-[#eff1f1] h-[93vh] overflow-y-autov flex justify-center items-center"
+    >
+      <div
+        id="cards-container"
+        class="flex gap-6 my-6 w-[95svw] mx-auto flex-col h-[550px] md:h-[350px] md:flex-row md:items-stretch md:justify-center md:gap-36"
+      >
+        <div
+          class="card flex flex-col justify-between bg-white md:w-[400px] rounded-lg px-4 py-6"
+        >
+          <h2 class="text-center font-Noto text-lg font-bold">Sign up</h2>
+          <div id="inputs" class="flex flex-col gap-6">
+            <div id="identity" class="flex gap-2">
+              <input
+                class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae] w-[145px]"
+                type="text"
+                placeholder="First Name"
+                id="first-name"
+              />
+              <input
+                class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae] w-[145px]"
+                type="text"
+                placeholder="Last Name"
+                id="last-name"
+              />
+              <input
+                class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae] grow w-[50px]"
+                type="number"
+                placeholder="Age"
+                id="age"
+              />
+            </div>
+            <input
+              class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae]"
+              type="text"
+              placeholder="E-mail"
+              id="email-signup"
+            />
+            <input
+              class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae]"
+              type="password"
+              placeholder="Password"
+              id="password-signup"
+            />
+          </div>
+          <button
+            id="sign-up"
+            class="bg-[#5cab91] text-white rounded-md w-1/4 self-end p-1 mt-8 md:mt-0"
+          >
+            Sign up
+          </button>
+        </div>
+        <div
+          class="card flex flex-col justify-between bg-white md:w-[400px] rounded-lg px-4 py-6"
+        >
+          <h2 class="text-center font-Noto text-lg font-bold">Sign in</h2>
+          <div id="inputs" class="flex flex-col gap-6">
+            <input
+              class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae]"
+              type="text"
+              placeholder="E-mail"
+              id="email-signin"
+            />
+            <input
+              class="bg-gray-100 rounded-md p-2 placeholder-[#696969] focus:outline-[#215cae]"
+              type="password"
+              placeholder="Password"
+              id="password-signin"
+            />
+          </div>
+          <button
+            id="sign-in"
+            class="bg-[#5cab91] text-white rounded-md p-1 mt-8 w-1/4 self-end md:mt-0"
+          >
+            Sign in
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -4,7 +4,9 @@ const total = totals.querySelector("#total");
 
 async function displayCart() {
   const data = await fetch(
-    "https://tickethack-back-ten.vercel.app/carts/"
+    `https://tickethack-back-ten.vercel.app/carts/${window.localStorage.getItem(
+      "userId"
+    )}`
   ).then((r) => r.json());
   if (data.allTripsInCart.length !== 0) {
     totals.classList.remove("opacity-0");
@@ -77,12 +79,16 @@ cartContainer.addEventListener("click", async (e) => {
     const options = { method: "DELETE" };
     const trip_id = e.target.parentNode.dataset.id;
     const response = await fetch(
-      `https://tickethack-back-ten.vercel.app/carts/${trip_id}`,
+      `https://tickethack-back-ten.vercel.app/carts/${trip_id}/${window.localStorage.getItem(
+        "userId"
+      )}`,
       options
     ).then((r) => r.json());
     if (cartContainer.children.length <= 2) await displayCart();
     const totalAmount = await fetch(
-      "https://tickethack-back-ten.vercel.app/carts/"
+      `https://tickethack-back-ten.vercel.app/carts/${window.localStorage.getItem(
+        "userId"
+      )}`
     )
       .then((r) => r.json())
       .then((data) =>
@@ -102,7 +108,10 @@ totals.addEventListener("click", async (e) => {
     const bookingsOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ trip_id }),
+      body: JSON.stringify({
+        trip_id,
+        user_id: window.localStorage.getItem("userId"),
+      }),
     };
     await fetch(
       `https://tickethack-back-ten.vercel.app/bookings/`,

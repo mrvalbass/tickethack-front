@@ -3,8 +3,11 @@ const bookingBottom = document.querySelector("#booking-bottom");
 
 async function displayBookings() {
   const data = await fetch(
-    "https://tickethack-back-ten.vercel.app/bookings/"
+    `https://tickethack-back-ten.vercel.app/bookings/${window.localStorage.getItem(
+      "userId"
+    )}`
   ).then((r) => r.json());
+  console.log(data.allTripsInBooking);
   if (data.allTripsInBooking.length !== 0) {
     bookingBottom.classList.remove("opacity-0");
     bookingContainer.innerHTML = "";
@@ -35,8 +38,6 @@ function getTimeToDeparture(date) {
   const UTCdate = new Date(date).getTime() + offsetInMinutes * 60_000;
   return Math.floor((UTCdate - Date.now()) / 3_600_000);
 }
-
-console.log(getTimeToDeparture("2024-04-17T11:00:00.000+00:00"));
 
 function createTrip(trip) {
   const tripElement = document.createElement("div");

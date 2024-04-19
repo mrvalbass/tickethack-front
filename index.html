@@ -17,7 +17,8 @@
       href="./style/images/train.png"
       type="image/x-icon"
     />
-    <script src="./script/script.js" defer></script>
+    <script src="./script/navbar.js" defer></script>
+    <script src="./script/index.js" defer></script>
   </head>
 
   <body class="font-Work">
@@ -27,9 +28,12 @@
           Tickethack
         </h1></a
       >
-      <nav class="flex gap-6 md:text-xs font-semibold">
+      <nav class="flex gap-6 md:text-xs font-semibold items-center">
         <a href="./pages/cart.html">Cart</a>
         <a href="./pages/bookings.html">Bookings</a>
+        <div id="user-status" class="flex items-center gap-2">
+          <a href="./pages/connection.html">Sign Up / Sign In</a>
+        </div>
       </nav>
     </header>
     <main
